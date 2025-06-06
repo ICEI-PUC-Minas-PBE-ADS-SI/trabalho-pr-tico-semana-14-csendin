@@ -149,11 +149,18 @@
         </div>
     </div>
 
+    <div class="container p-4">
+        <h2 class="pb-2 custom-border-bottom">Receitas por Tempo de Preparo</h2>
+        <canvas id="graficoTempoPreparo" width="400" height="200"></canvas>
+    </div>
+
     <footer class="container p-4 d-flex justify-content-center align-items-center">
         <h5>Caio Sendin - Todos os direitos reservados.</h5>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="assets/js/app.js"></script>
 
@@ -164,6 +171,65 @@
             botao.addEventListener('click', () => {
                 const id = botao.getAttribute('data-id');
                 window.location.href = `detalhe.html?id=${id}`;
+            });
+        });
+
+        fetch('../db/db.json')
+        .then(response => response.json())
+        .then(data => {
+            const categoriasTempo = {
+                'Até 30min': 0,
+                '31min a 1h': 0,
+                'Mais de 1h': 0
+            };
+
+            data.receitas.forEach(receita => {
+                const tempo = receita.tempo?.toLowerCase();
+                if (!tempo) return;
+
+                if (tempo.includes('min')) {
+                    const minutos = parseInt(tempo);
+                    if (!isNaN(minutos)) {
+                        if (minutos <= 30) {
+                            categoriasTempo['Até 30min']++;
+                        } else {
+                            categoriasTempo['31min a 1h']++;
+                        }
+                    }
+                } else if (tempo.includes('1h') && !tempo.includes('30')) {
+                    categoriasTempo['31min a 1h']++;
+                } else {
+                    categoriasTempo['Mais de 1h']++;
+                }
+            });
+
+            new Chart(document.getElementById('graficoTempoPreparo'), {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(categoriasTempo),
+                    datasets: [{
+                        label: 'Quantidade de Receitas',
+                        data: Object.values(categoriasTempo),
+                        backgroundColor: ['#3498DB', '#F39C12', '#E74C3C']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Receitas'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
             });
         });
     </script>

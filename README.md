@@ -16,8 +16,6 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 
 **Print da tela com a implementação**
 
-<< Coloque aqui uma breve explicação da implementação feita nessa etapa>>
+Gráfico de barras por tempo de preparo: Agrupar receitas por tempo (ex: até 30min, 1h…)
 
-<<  COLOQUE A IMAGEM TELA 1 AQUI >>
-
-<<  COLOQUE A IMAGEM TELA 2 AQUI >>
+![Gráfico](public/assets/prints/Captura%20de%20tela%202025-06-06%20185907.png)
