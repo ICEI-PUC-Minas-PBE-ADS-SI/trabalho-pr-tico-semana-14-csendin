@@ -9,10 +9,10 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Caio Rezende Barreto Sendin
+- Matricula: 881629
+- Proposta de projeto escolhida: Diretório de Receitas
+- Breve descrição sobre seu projeto: Um site de receitas em HTML, CSS e JS com páginas individuais para cada receita, acessadas por cards interativos
 
 **Print da tela com a implementação**
 
