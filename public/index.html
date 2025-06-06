@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/svg">
+
+    <title>Diário de Receitas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="container p-4">
+        <a href="index.html">
+            <img src="assets/img/logo.svg" alt="Logo" style="max-width: 48px;">
+        </a>
+    </header>
+
+    <div class="container p-4">
+        <h1 class="m-0 pb-2 custom-border-bottom">Receitas em Destaque</h1>
+    </div>
+
+    <div class="container p-4">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="detalhe.html?id=1">
+                        <img src="assets/img/slider-01.png" class="d-block w-100" alt="Strogonoff de Frango">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="detalhe.html?id=2">
+                        <img src="assets/img/slider-02.png" class="d-block w-100" alt="Brigadeiro de Colher">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="detalhe.html?id=3">
+                        <img src="assets/img/slider-03.png" class="d-block w-100" alt="Caipirinha de Vodka">
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <h1 class="m-0 pb-2 custom-border-bottom">Todas as Receitas</h1>
+    </div>
+
+    <div class="container p-4">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="assets/img/img-01.jpg" class="card-img-top" alt="Imagem da Receita">
+                    <div class="card-body">
+                        <h5 class="card-title">Strogonoff de Frango</h5>
+                        <button type="button" class="btn btn-link p-0" data-id="1">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/img/img-02.jpg" class="card-img-top" alt="Imagem da Receita">
+                    <div class="card-body">
+                        <h5 class="card-title">Brigadeiro de Colher</h5>
+                        <button type="button" class="btn btn-link p-0" data-id="2">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/img/img-03.jpg" class="card-img-top" alt="Imagem da Receita">
+                    <div class="card-body">
+                        <h5 class="card-title">Caipirinha de Vodka</h5>
+                        <button type="button" class="btn btn-link p-0" data-id="3">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/img/img-04.jpg" class="card-img-top" alt="Imagem da Receita">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolo de Cenoura</h5>
+                        <button type="button" class="btn btn-link p-0" data-id="4">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/img/img-05.png" class="card-img-top" alt="Imagem da Receita">
+                    <div class="card-body">
+                        <h5 class="card-title">Gin Tônica</h5>
+                        <button type="button" class="btn btn-link p-0" data-id="5">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/img/img-06.jpg" class="card-img-top" alt="Imagem da Receita">
+                    <div class="card-body">
+                        <h5 class="card-title">Macarronada</h5>
+                        <button type="button" class="btn btn-link p-0" data-id="6">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/img/img-07.jpeg" class="card-img-top" alt="Imagem da Receita">
+                    <div class="card-body">
+                        <h5 class="card-title">Pudim</h5>
+                        <button type="button" class="btn btn-link p-0" data-id="7">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/img/img-08.png" class="card-img-top" alt="Imagem da Receita">
+                    <div class="card-body">
+                        <h5 class="card-title">Negroni</h5>
+                        <button type="button" class="btn btn-link p-0" data-id="8">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container p-4 d-flex justify-content-center align-items-center">
+        <h5>Caio Sendin - Todos os direitos reservados.</h5>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        const botoes = document.querySelectorAll('.btn');
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                const id = botao.getAttribute('data-id');
+                window.location.href = `detalhe.html?id=${id}`;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

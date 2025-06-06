@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/svg">
+
+    <title>Diário de Receitas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="container p-4">
+        <a href="index.html">
+            <img src="assets/img/logo.svg" alt="Logo" style="max-width: 48px;">
+        </a>
+    </header>
+
+    <div class="container p-4 d-flex flex-column gap-2" id="layout-00"></div>
+
+    <div class="container p-4" id="title-01">
+        <h1 class="m-0 pb-2 custom-border-bottom">Informações Gerais</h1>
+    </div>
+
+    <div class="container p-4 d-flex flex-column gap-2" id="layout-01"></div>
+
+    <div class="container p-4" id="title-02">
+        <h1 class="m-0 pb-2 custom-border-bottom">Ingredientes</h1>
+    </div>
+
+    <div class="container p-4 d-flex flex-column gap-2" id="layout-02"></div>
+
+    <div class="container p-4" id="title-03">
+        <h1 class="m-0 pb-2 custom-border-bottom">Utensílios</h1>
+    </div>
+
+    <div class="container p-4 d-flex flex-column gap-2" id="layout-03"></div>
+
+    <div class="container p-4" id="title-04">
+        <h1 class="m-0 pb-2 custom-border-bottom">Modo de Preparo</h1>
+    </div>
+
+    <div class="container p-4 d-flex flex-column gap-2" id="layout-04"></div>
+
+    <div class="container p-4" id="title-05">
+        <h1 class="m-0 pb-2 custom-border-bottom">Tempo de Preparo e Dificuldade</h1>
+    </div>
+
+    <div class="container p-4 d-flex flex-column gap-2" id="layout-05"></div>
+
+    <div class="container p-4" id="title-06">
+        <h1 class="m-0 pb-2 custom-border-bottom">Fotos</h1>
+    </div>
+
+    <div class="container p-4 d-flex flex-column gap-2 swiper" id="layout-06"></div>
+
+    <div class="container p-4"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        // detalhe.html?id=1
+
+        let params = new URLSearchParams(location.search)
+        let id = params.get('id')
+
+        let receita = receitas.find(function (elem) { return elem.id == id })
+
+        let container00 = document.getElementById('layout-00')
+        let container01 = document.getElementById('layout-01')
+        let container02 = document.getElementById('layout-02')
+        let container03 = document.getElementById('layout-03')
+        let container04 = document.getElementById('layout-04')
+        let container05 = document.getElementById('layout-05')
+        let container06 = document.getElementById('layout-06')
+
+        if (receita) {
+            container00.innerHTML = `<img src="${receita.imagem}" alt="Imagem da Receita" style="max-width: 500px;">`
+
+            container01.innerHTML = `
+                <h3><strong>Nome:</strong> ${receita.nome}</h3>
+                <h3><strong>Descrição:</strong> ${receita.descricao}</h3>
+            `
+
+            const ingredientes = receita.ingredientes
+            
+            let lista = '<ul class="list-group">'
+    
+            ingredientes.forEach((item) => {
+                lista += `<li class="list-group-item">${item.conteudo}</li>`
+            })
+            
+            lista += '</ul>'
+
+            container02.innerHTML = lista
+
+            const utensilios = receita.utensilios
+            
+            let lista02 = '<ul class="list-group">'
+    
+            utensilios.forEach((item) => {
+                lista02 += `<li class="list-group-item">${item.conteudo}</li>`
+            })
+            
+            lista02 += '</ul>'
+
+            container03.innerHTML = lista02
+
+            const modo = receita.modo
+            
+            let lista03 = '<ol class="list-group list-group-numbered">'
+    
+            modo.forEach((item) => {
+                lista03 += `<li class="list-group-item">${item.conteudo}</li>`
+            })
+            
+            lista03 += '</ol>'
+
+            container04.innerHTML = lista03
+
+            container05.innerHTML = `
+                <h3><strong>Tempo:</strong> ${receita.tempo}</h3>
+                <h3><strong>Dificuldade:</strong> ${receita.dificuldade}</h3>
+            `
+
+            container06.innerHTML = `
+                <div class="swiper-wrapper">
+                    ${receita.imgs.map(() => `<div class="swiper-slide"></div>`).join('')}
+                </div>
+                <div class="swiper-pagination" style="bottom: -4px;"></div>
+            `
+
+            const slides = container06.querySelectorAll('.swiper-slide')
+
+            receita.imgs.forEach((item, index) => {
+                slides[index].innerHTML = `<img src="${item.conteudo}" alt="Imagem ${index + 1}" style="width:100%;">`
+            })
+
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                spaceBetween: 32,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 }
+                }
+            })
+        }
+        else {
+            container00.innerHTML = '<h1>Receita não encontrada</h1>'
+
+            const title01 = document.getElementById('title-01')
+            title01.style.display = 'none'
+            container01.style.display = 'none'
+
+            const title02 = document.getElementById('title-02')
+            title02.style.display = 'none'
+            container02.style.display = 'none'
+
+            const title03 = document.getElementById('title-03')
+            title03.style.display = 'none'
+            container03.style.display = 'none'
+
+            const title04 = document.getElementById('title-04')
+            title04.style.display = 'none'
+            container04.style.display = 'none'
+
+            const title05 = document.getElementById('title-05')
+            title05.style.display = 'none'
+            container05.style.display = 'none'
+
+            const title06 = document.getElementById('title-06')
+            title06.style.display = 'none'
+            container06.style.display = 'none'
+        }
+
+        console.log({ params, id })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,750 @@
+const receitas = [
+    {
+        "id": 1,
+        "nome": "Strogonoff de Frango",
+        "descricao": "O strogonoff de frango é um prato fácil, saboroso e querido no Brasil. Diferente da versão russa, aqui o molho é cremoso, encorpado e servido com batata palha e arroz. É uma receita simples e irresistível para qualquer ocasião!",
+        "ingredientes": [
+            {
+                "id": 1,
+                "conteudo": "3 peitos de frango cortados em cubos"
+            },
+            {
+                "id": 2,
+                "conteudo": "1 dente de alho picado"
+            },
+            {
+                "id": 3,
+                "conteudo": "sal a gosto"
+            },
+            {
+                "id": 4,
+                "conteudo": "pimenta-do-reino a gosto"
+            },
+            {
+                "id": 5,
+                "conteudo": "1 cebola picada"
+            },
+            {
+                "id": 6,
+                "conteudo": "2 colheres (sopa) de maionese Helmanns"
+            },
+            {
+                "id": 7,
+                "conteudo": "1 colher de manteiga"
+            },
+            {
+                "id": 8,
+                "conteudo": "1/2 copo de ketchup"
+            },
+            {
+                "id": 9,
+                "conteudo": "1/3 copo de mostarda"
+            },
+            {
+                "id": 10,
+                "conteudo": "1 copo de cogumelos"
+            },
+            {
+                "id": 11,
+                "conteudo": "1 copo de creme de leite"
+            },
+            {
+                "id": 12,
+                "conteudo": "batata palha a gosto"
+            }
+        ],
+        "utensilios": [
+            {
+                "id": 1,
+                "conteudo": "Panela"
+            },
+            {
+                "id": 2,
+                "conteudo": "Colher de silicone"
+            },
+            {
+                "id": 3,
+                "conteudo": "Prato fundo"
+            },
+            {
+                "id": 4,
+                "conteudo": "Faca"
+            },
+            {
+                "id": 5,
+                "conteudo": "Tábua de corte"
+            }
+        ],
+        "tempo": "1h",
+        "dificuldade": "Fácil",
+        "modo": [
+            {
+                "id": 1,
+                "conteudo": "Em uma panela, misture o frango, o alho, a maionese, o sal e a pimenta."
+            },
+            {
+                "id": 2,
+                "conteudo": "Em uma frigideira grande, derreta a manteiga e doure a cebola."
+            },
+            {
+                "id": 3,
+                "conteudo": "Junte o frango temperado até que esteja dourado."
+            },
+            {
+                "id": 4,
+                "conteudo": "Adicione os cogumelos, o ketchup e a mostarda."
+            },
+            {
+                "id": 5,
+                "conteudo": "Incorpore o creme de leite e retire do fogo antes de ferver."
+            },
+            {
+                "id": 6,
+                "conteudo": "Sirva com arroz branco e batata palha."
+            }
+        ],
+        "imgs": [
+            {
+                "id": 1,
+                "conteudo": "assets/img/img-01.jpg"
+            },
+            {
+                "id": 2,
+                "conteudo": "https://acdn-us.mitiendanube.com/stores/002/491/154/products/strogonoff_de_frango11-369abc2b23b554587616762941399112-640-0.jpg"
+            },
+            {
+                "id": 3,
+                "conteudo": "https://i0.wp.com/receitaspelomundo.com.br/wp-content/uploads/2024/06/receita-de-strogonoff-de-frango-receitas-pelo-mundo-960x960-1.jpg"
+            },
+            {
+                "id": 4,
+                "conteudo": "https://receitanatureba.com/wp-content/uploads/2017/01/Strogonoff-de-Frango-Light.jpg"
+            }
+        ],
+        "imagem": "assets/img/img-01.jpg"
+    },
+    {
+        "id": 2,
+        "nome": "Brigadeiro de Colher",
+        "descricao": "O brigadeiro de colher é um doce brasileiro fácil e irresistível, perfeito para comer direto da panela ou servir em potinhos. A receita leva leite condensado, creme de leite, margarina e chocolate em pó. Dá pra preparar no fogão ou no micro-ondas, de um jeito simples e delicioso!",
+        "ingredientes": [
+            {
+                "id": 1,
+                "conteudo": "1 lata de leite condensado"
+            },
+            {
+                "id": 2,
+                "conteudo": "1 caixinha de creme de leite"
+            },
+            {
+                "id": 3,
+                "conteudo": "4 colheres de chocolate em pó"
+            },
+            {
+                "id": 4,
+                "conteudo": "1 colher de margarina"
+            },
+            {
+                "id": 5,
+                "conteudo": "Chocolate granulado para decorar"
+            }
+        ],
+        "utensilios": [
+            {
+                "id": 1,
+                "conteudo": "Panela"
+            },
+            {
+                "id": 2,
+                "conteudo": "Colher de pau"
+            },
+            {
+                "id": 3,
+                "conteudo": "Copo medidor"
+            }
+        ],
+        "tempo": "20min",
+        "dificuldade": "Muito Fácil",
+        "modo": [
+            {
+                "id": 1,
+                "conteudo": "Num refratário alto e grosso, coloque o leite condensado, o chocolate e a margarina, misture e leve ao micro-ondas. Quase todos os micro-ondas têm a tecla brigadeiro; se o seu não tem, deixe 7 minutos em potência alta, mexendo na metade do tempo."
+            },
+            {
+                "id": 2,
+                "conteudo": "Enquanto isso, prepare uma bacia com gelo, usando aproximadamente 2 forminhas de gelo."
+            },
+            {
+                "id": 3,
+                "conteudo": "Quando o brigadeiro estiver pronto, coloque a tigela na bacia de gelo (não se preocupe, não quebra). Adicione o creme de leite (de caixinha é melhor porque vem menos) e misture bem até ficar homogêneo. Parece que vai desandar, mas não vai."
+            },
+            {
+                "id": 4,
+                "conteudo": "Coloque em tacinhas ou copinhos, decore com o granulado e leve para gelar."
+            }
+        ],
+        "imgs": [
+            {
+                "id": 1,
+                "conteudo": "assets/img/img-02.jpg"
+            },
+            {
+                "id": 2,
+                "conteudo": "https://static.itdg.com.br/images/1200-675/60a16ac68e9d7e162a206ad0a2c4a9f6/67539-shutterstock-1470291143.jpg"
+            },
+            {
+                "id": 3,
+                "conteudo": "https://receidelicia.com.br/wp-content/uploads/2021/02/brigadeiro-de-colher-1024x683.jpg"
+            },
+            {
+                "id": 4,
+                "conteudo": "https://www.tortaecia.com.br/wp-content/uploads/2020/06/brigadeiro-de-colher.jpg"
+            }
+        ],
+        "imagem": "assets/img/img-02.jpg"
+    },
+    {
+        "id": 3,
+        "nome": "Caipirinha de Vodka",
+        "descricao": "A caipirinha de limão é um drink clássico e refrescante que representa o Brasil em qualquer festa. Feita com limão, açúcar, cachaça e gelo, é simples de preparar e irresistível. Depois de dominar a tradicional, você pode explorar variações como morango ou vodka!",
+        "ingredientes": [
+            {
+                "id": 1,
+                "conteudo": "1 limão grande"
+            },
+            {
+                "id": 2,
+                "conteudo": "2 colheres de açúcar"
+            },
+            {
+                "id": 3,
+                "conteudo": "gelo a gosto"
+            },
+            {
+                "id": 4,
+                "conteudo": "vodka (o quanto bastar para completar o copo)"
+            }
+        ],
+        "utensilios": [
+            {
+                "id": 1,
+                "conteudo": "Expremedor de Limão"
+            },
+            {
+                "id": 2,
+                "conteudo": "Faca"
+            },
+            {
+                "id": 3,
+                "conteudo": "Tábua de corte"
+            }
+        ],
+        "tempo": "5min",
+        "dificuldade": "Muito Fácil",
+        "modo": [
+            {
+                "id": 1,
+                "conteudo": "Pegue o limão, coloque-o na horizontal e retire as duas pontas. Vire-o na vertical e corte-o ao meio, retire os meios (parte branca) do limão e fatie."
+            },
+            {
+                "id": 2,
+                "conteudo": "Coloque o limão fatiado e duas colheres bem cheias de açúcar dentro de um copo próprio para a bebida."
+            },
+            {
+                "id": 3,
+                "conteudo": "Coloque pedras de gelo até quase encher o copo (aproximadamente 12 pedras pequenas de gelo) e encha o copo com a vodka."
+            },
+            {
+                "id": 4,
+                "conteudo": "Mexa bem com uma colher ou coloque em uma coqueteleira e sirva-se!"
+            }
+        ],
+        "imgs": [
+            {
+                "id": 1,
+                "conteudo": "assets/img/img-03.jpg"
+            },
+            {
+                "id": 2,
+                "conteudo": "https://torogramado.com.br/wp-content/uploads/2024/01/historia-da-caipirinha-1.jpg"
+            },
+            {
+                "id": 3,
+                "conteudo": "https://cachacagestor.com.br/blog/wp-content/uploads/2019/06/brazilian-traditional-refreshing-caipirinha_70252-36.jpg"
+            },
+            {
+                "id": 4,
+                "conteudo": "https://content.paodeacucar.com/wp-content/uploads/2019/12/caipirinha-de-cerveja.jpg"
+            }
+        ],
+        "imagem": "assets/img/img-03.jpg"
+    },
+    {
+        "id": 4,
+        "nome": "Bolo de Cenoura",
+        "descricao": "O bolo de cenoura é um clássico brasileiro, perfeito para o café da manhã ou lanche da tarde. Com massa macia e cobertura de chocolate, essa receita simples feita no liquidificador conquista a todos. Ideal para saborear com um cafezinho!",
+        "ingredientes": [
+            {
+                "id": 1,
+                "conteudo": "1/2 xícara (chá) de óleo"
+            },
+            {
+                "id": 2,
+                "conteudo": "3 cenouras médias raladas"
+            },
+            {
+                "id": 3,
+                "conteudo": "4 ovos"
+            },
+            {
+                "id": 4,
+                "conteudo": "2 xícaras (chá) de açúcar"
+            },
+            {
+                "id": 5,
+                "conteudo": "2 e 1/2 xícaras (chá) de farinha de trigo"
+            },
+            {
+                "id": 6,
+                "conteudo": "1 colher (sopa) de fermento em pó"
+            },
+            {
+                "id": 7,
+                "conteudo": "1 colher (sopa) de manteiga"
+            },
+            {
+                "id": 8,
+                "conteudo": "3 colheres (sopa) de chocolate em pó"
+            },
+            {
+                "id": 9,
+                "conteudo": "1 xícara (chá) de açúcar"
+            },
+            {
+                "id": 10,
+                "conteudo": "1 xícara (chá) de leite"
+            }
+        ],
+        "utensilios": [
+            {
+                "id": 1,
+                "conteudo": "Batedeira"
+            },
+            {
+                "id": 2,
+                "conteudo": "Liquidificador"
+            },
+            {
+                "id": 3,
+                "conteudo": "Forma de bolo"
+            },
+            {
+                "id": 4,
+                "conteudo": "Prato de sobremesa"
+            }
+        ],
+        "tempo": "40min",
+        "dificuldade": "Médio",
+        "modo": [
+            {
+                "id": 1,
+                "conteudo": "Em um liquidificador, adicione a cenoura, os ovos e o óleo, depois misture."
+            },
+            {
+                "id": 2,
+                "conteudo": "Acrescente o açúcar e bata novamente por 5 minutos."
+            },
+            {
+                "id": 3,
+                "conteudo": "Em uma tigela ou na batedeira, adicione a farinha de trigo e depois misture novamente."
+            },
+            {
+                "id": 4,
+                "conteudo": "Acrescente o fermento e misture lentamente com uma colher."
+            },
+            {
+                "id": 5,
+                "conteudo": "Asse em um forno preaquecido a 180° C por aproximadamente 40 minutos."
+            },
+            {
+                "id": 6,
+                "conteudo": "Despeje em uma tigela a manteiga, o chocolate em pó, o açúcar e o leite, depois misture."
+            },
+            {
+                "id": 7,
+                "conteudo": "Leve a mistura ao fogo e continue misturando até obter uma consistência cremosa, depois despeje a calda por cima do bolo."
+            }
+        ],
+        "imgs": [
+            {
+                "id": 1,
+                "conteudo": "assets/img/img-04.jpg"
+            },
+            {
+                "id": 2,
+                "conteudo": "https://static.itdg.com.br/images/640-440/d290bc79bcad112ee9095604e45eb262/365326-original.jpg"
+            },
+            {
+                "id": 3,
+                "conteudo": "https://cozinhadoce.com.br/wp-content/uploads/2024/07/bolo-de-cenoura-recheado-receita-facil-500x404.jpg"
+            },
+            {
+                "id": 4,
+                "conteudo": "https://jantinhadehoje.com.br/wp-content/uploads/2017/03/img_2581.jpg"
+            }
+        ],
+        "imagem": "assets/img/img-04.jpg"
+    },
+    {
+        "id": 5,
+        "nome": "Gin Tônica",
+        "descricao": "Os drinks com gin oferecem sabores variados, desde a clássica gin tônica até versões com morango ou melancia. Cada receita combina frescor, frutas e um toque especial para criar experiências únicas. Experimente e descubra sua combinação favorita!",
+        "ingredientes": [
+            {
+                "id": 1,
+                "conteudo": "60 ml de gin"
+            },
+            {
+                "id": 2,
+                "conteudo": "120 ml de água"
+            },
+            {
+                "id": 3,
+                "conteudo": "1/4 de limão"
+            },
+            {
+                "id": 4,
+                "conteudo": "gelo a gosto"
+            }
+        ],
+        "utensilios": [
+            {
+                "id": 1,
+                "conteudo": "Strainer gin (Coador)"
+            },
+            {
+                "id": 2,
+                "conteudo": "Jigger"
+            },
+            {
+                "id": 3,
+                "conteudo": "Colher de Bar"
+            },
+            {
+                "id": 4,
+                "conteudo": "Coqueteleira"
+            },
+            {
+                "id": 5,
+                "conteudo": "Pinça"
+            }
+        ],
+        "tempo": "20min",
+        "dificuldade": "Fácil",
+        "modo": [
+            {
+                "id": 1,
+                "conteudo": "Numa jarra, coloque o gelo, o gin, a água e o limão."
+            },
+            {
+                "id": 2,
+                "conteudo": "Misture tudo e sirva numa taça com rodelas de limão."
+            }
+        ],
+        "imgs": [
+            {
+                "id": 1,
+                "conteudo": "assets/img/img-05.png"
+            },
+            {
+                "id": 2,
+                "conteudo": "https://www.guiadasemana.com.br/contentFiles/image/opt_w1280h960/2019/10/FEA/64397_shutterstock-1039600045.jpg"
+            },
+            {
+                "id": 3,
+                "conteudo": "https://i.ytimg.com/vi/INswSfj8LeQ/maxresdefault.jpg"
+            },
+            {
+                "id": 4,
+                "conteudo": "https://teashop.com.br/cdn/shop/files/gin-tonica-iced-tea-berry-fields-e4cc129bb4e10a1f4ada5e5bee1324df.png?v=1743101666&width=960" 
+            }
+        ],
+        "imagem": "assets/img/img-05.png"
+    },
+    {
+        "id": 6,
+        "nome": "Macarronada",
+        "descricao": "A macarronada é um prato clássico, simples e cheio de sabor, ideal para reunir família e amigos. Pode ser servida com molho de tomate, carne, frango ou frutos do mar. É sempre uma escolha deliciosa e aconchegante para qualquer refeição!",
+        "ingredientes": [
+            {
+                "id": 1,
+                "conteudo": "carne moída a gosto"
+            },
+            {
+                "id": 2,
+                "conteudo": "macarrão refogado na manteiga a gosto"
+            },
+            {
+                "id": 3,
+                "conteudo": "1 lata de milho verde"
+            },
+            {
+                "id": 4,
+                "conteudo": "1 lata de ervilha"
+            },
+            {
+                "id": 5,
+                "conteudo": "1 lata de creme de leite"
+            },
+            {
+                "id": 6,
+                "conteudo": "1 lata de molho de tomate"
+            }
+        ],
+        "utensilios": [
+            {
+                "id": 1,
+                "conteudo": "Abridores"
+            },
+            {
+                "id": 2,
+                "conteudo": "Amassadores"
+            },
+            {
+                "id": 3,
+                "conteudo": "Batedores Fouet"
+            },
+            {
+                "id": 4,
+                "conteudo": "Coadores e Peneiras"
+            },
+            {
+                "id": 5,
+                "conteudo": "Escumadeiras e Conchas"
+            },
+            {
+                "id": 6,
+                "conteudo": "Espátulas e Colheres"
+            },
+            {
+                "id": 7,
+                "conteudo": "Espremedores"
+            },
+            {
+                "id": 8,
+                "conteudo": "Kits de Utensílios"
+            }
+        ],
+        "tempo": "30min",
+        "dificuldade": "Médio",
+        "modo": [
+            {
+                "id": 1,
+                "conteudo": "Em uma panela, leve a carne moída temperada ao fogo e adicione o milho verde e a ervilha."
+            },
+            {
+                "id": 2,
+                "conteudo": "Misture tudo e deixe cozinhar por 30 minutos."
+            },
+            {
+                "id": 3,
+                "conteudo": "Desligue o fogo e acrescente o creme de leite e o molho de tomate."
+            },
+            {
+                "id": 4,
+                "conteudo": "Incorpore o macarrão refogado na manteiga e misture bem."
+            }
+        ],
+        "imgs": [
+            {
+                "id": 1,
+                "conteudo": "assets/img/img-06.jpg"
+            },
+            {
+                "id": 2,
+                "conteudo": "https://img.cybercook.com.br/receitas/634/macarronada-5.jpeg"
+            },
+            {
+                "id": 3,
+                "conteudo": "https://anamariareceitas.com.br/wp-content/uploads/2024/06/10-768x512.jpg"
+            },
+            {
+                "id": 4,
+                "conteudo": "https://www.receiteria.com.br/wp-content/uploads/receitas-de-macarronada-italiana.jpg" 
+            }
+        ],
+        "imagem": "assets/img/img-06.jpg"
+    },
+    {
+        "id": 7,
+        "nome": "Pudim",
+        "descricao": "O pudim é uma sobremesa clássica e cremosa, sempre deliciosa e perfeita para qualquer ocasião. Pode ser feito de várias formas, como o tradicional, com coco ou chocolate. Simples de preparar, é uma escolha irresistível para adoçar a refeição!",
+        "ingredientes": [
+            {
+                "id": 1,
+                "conteudo": "3 ovos"
+            },
+            {
+                "id": 2,
+                "conteudo": "1 lata de leite moça"
+            },
+            {
+                "id": 3,
+                "conteudo": "1 medida da lata de leite moça de leite"
+            },
+            {
+                "id": 4,
+                "conteudo": "3 colheres de açúcar"
+            }
+        ],
+        "utensilios": [
+            {
+                "id": 1,
+                "conteudo": "uma forma de pudim (ou assadeira)"
+            },
+            {
+                "id": 2,
+                "conteudo": "um liquidificador"
+            },
+            {
+                "id": 3,
+                "conteudo": "uma panela para banho-maria"
+            },
+            {
+                "id": 4,
+                "conteudo": "uma espátula de silicone"
+            }
+        ],
+        "tempo": "50min",
+        "dificuldade": "Difícil",
+        "modo": [
+            {
+                "id": 1,
+                "conteudo": "Ligue o forno para aquecer por 10 minutos em fogo baixo."
+            },
+            {
+                "id": 2,
+                "conteudo": "Bata no liquidificador os ovos, o leite moça e o leite por 3 minutos."
+            },
+            {
+                "id": 3,
+                "conteudo": "Faça uma calda com o açúcar, deixe esfriar um pouco."
+            },
+            {
+                "id": 4,
+                "conteudo": "Coloque a calda numa forma com furo no meio, coloque o pudim sobre a calda."
+            },
+            {
+                "id": 5,
+                "conteudo": "Leve ao forno, não precisa ser em banho-maria, espere ficar dourado em cima, em torno de 40 minutos."
+            },
+            {
+                "id": 6,
+                "conteudo": "Aguarde esfriar e leve à geladeira (é bom fazer de um dia para o outro)."
+            }
+        ],
+        "imgs": [
+            {
+                "id": 1,
+                "conteudo": "assets/img/img-07.jpeg"
+            },
+            {
+                "id": 2,
+                "conteudo": "https://assets.unileversolutions.com/recipes-v2/236947.jpg"
+            },
+            {
+                "id": 3,
+                "conteudo": "https://images.aws.nestle.recipes/original/ad1dbf58b522579a5da65f10c5702e1f_21_pudim.png"
+            },
+            {
+                "id": 4,
+                "conteudo": "https://img.cybercook.com.br/receitas/739/pudim-gelado-ao-leite.jpeg" 
+            }
+        ],
+        "imagem": "assets/img/img-07.jpeg"
+    },
+    {
+        "id": 8,
+        "nome": "Negroni",
+        "descricao": "O Negroni é um coquetel italiano clássico, feito com gin, vermute e Campari. Sua combinação equilibrada oferece sabores marcantes e contrastantes, com um toque de sofisticação. Com sua cor rubi e sabor único, é um ícone da coquetelaria.",
+        "ingredientes": [
+            {
+                "id": 1,
+                "conteudo": "1 dose de Campari"
+            },
+            {
+                "id": 2,
+                "conteudo": "1 dose de Vermute tinto"
+            },
+            {
+                "id": 3,
+                "conteudo": "1 dose de Gin"
+            },
+            {
+                "id": 4,
+                "conteudo": "1 rodela de laranja com casca e sem semente"
+            },
+            {
+                "id": 5,
+                "conteudo": "Gelo à vontade"
+            }
+        ],
+        "utensilios": [
+            {
+                "id": 1,
+                "conteudo": "Copo de Vidro"
+            },
+            {
+                "id": 2,
+                "conteudo": "Forma de Gelo"
+            },
+            {
+                "id": 3,
+                "conteudo": "Descascador de Laranja"
+            }
+        ],
+        "tempo": "10min",
+        "dificuldade": "Muito Fácil",
+        "modo": [
+            {
+                "id": 1,
+                "conteudo": "Misture as doses em um copo."
+            },
+            {
+                "id": 2,
+                "conteudo": "Mexa e levemente com uma colher."
+            },
+            {
+                "id": 3,
+                "conteudo": "Adicione o gelo."
+            },
+            {
+                "id": 4,
+                "conteudo": "Mexa por mais 30 segundos."
+            },
+            {
+                "id": 5,
+                "conteudo": "Enfeite com a laranja."
+            }
+        ],
+        "imgs": [
+            {
+                "id": 1,
+                "conteudo": "assets/img/img-08.png"
+            },
+            {
+                "id": 2,
+                "conteudo": "https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/1D4CCB7D-D830-4ED3-9535-875D10CFC801/Derivates/DAD3AE52-E326-4309-90BA-10F6BEEB1EC7.jpg"
+            },
+            {
+                "id": 3,
+                "conteudo": "https://br.giallozafferano.com/images/4-473/Negroni-cocktail_1200x800.jpg"
+            },
+            {
+                "id": 4,
+                "conteudo": "https://conteudo.imguol.com.br/c/entretenimento/73/2020/09/10/negroni-1599771396384_v2_1x1.jpg" 
+            }
+        ],
+        "imagem": "assets/img/img-08.png"
+    }
+]
